@@ -1,0 +1,85 @@
+@model UsersRequestsRouming.Models.Request
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<p class="error">@ViewBag.ErrorMessage</p>
+<h3>Вы точно уверены, что хотите удалить это обращение?</h3>
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestReason)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Direction)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direction)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RequestDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RequestDateTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить"/> | 
+            @Html.ActionLink("Назад", "AllRequests")
+        </div>
+    }
+</div>
